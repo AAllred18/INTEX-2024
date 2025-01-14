@@ -13,3 +13,7 @@ Website: https://theturtleshelterproject.is404.net/
 
 Example Admin Login: johndoe  
 Example Admin Password: securepassword123
+
+*Improvements
+- Better security for back end website
+- Connect to the AWS database in a way that hides login information
