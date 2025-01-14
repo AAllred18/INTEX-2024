@@ -1,0 +1,793 @@
+/* Global styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  h1, h2, h3 {
+    font-family: 'Helvetica', sans-serif;
+    font-weight: 700;
+  }
+  
+  p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  .nav-link{
+    color: black;
+  }
+
+  /* Hero Section */
+ /* Hero Section */
+.hero {
+  position: relative;
+  background-image: url(/assets/HomeBackground.jpg);
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  width: 100%;
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.nav-item{
+  display: flex;
+  flex-direction: row;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Darken with a black overlay */
+  z-index: 1;
+}
+
+.hero h1,
+.hero p,
+.hero .hero-btn {
+  position: relative;
+  z-index: 2; /* Ensure content is above the overlay */
+}
+.navbar-toggler {
+  z-index: 1050; /* Ensure it's above other elements */
+}
+/* Custom CSS for Navbar */
+/* Navbar for Toggle Dropdown */
+@media (max-width: 768px) {
+  .navbar-nav {
+    flex-direction: column; /* Dropdown displayed as a column */
+    align-items: center; /* Align items to the start for better UX */
+    width: 100%; /* Full width for dropdown */
+    padding: 0; /* Remove extra padding */
+  }
+
+  .nav-item {
+    display: flex;
+    flex-direction: row;
+    width: 100%; /* Ensure full width for each item */
+    text-align: left; /* Align text to the left */
+    padding: 10px 20px; /* Add padding for better spacing */
+    border-bottom: 1px solid #ddd; /* Add separator for better visibility */
+  }
+
+  .nav-item:last-child {
+    border-bottom: none; /* Remove border from the last item */
+  }
+
+  .nav-link {
+    display: block; /* Ensure links are visible */
+    padding: 10px 0; /* Add vertical padding for touch targets */
+  }
+}
+
+/* Flex Row for Social Links (Facebook, Instagram, Login) */
+.social-gap {
+  display: flex;
+  flex-direction: row; /* Horizontal alignment */
+  gap: 10px; /* Add spacing between icons */
+  justify-content: center; /* Center align the items */
+  margin-top: 10px; /* Add spacing from the dropdown */
+}
+
+.social-gap .social-media {
+  background-color: teal; /* Consistent circle background */
+  color: white;
+  width: 40px; /* Circle size */
+  height: 40px; /* Circle size */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%; /* Circular appearance */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.social-gap .social-media:hover {
+  background-color: white; /* Change background on hover */
+  color: teal; /* Change icon color on hover */
+  border: 1px solid teal; /* Add a border on hover */
+}
+
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Prevent layout shift on hover by keeping button size consistent */
+.login1-btn {
+ 
+  background-color: teal;
+  color: white;
+  padding: 10px 24px; /* Maintain consistent padding */
+  font-size: 1rem; /* Large text size */
+  font-weight: 700; /* Bold text */
+  border-radius: 30px; /* Rounded corners */
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  box-sizing: border-box; /* Ensure padding is included in total width/height */
+}
+
+.login1-btn:hover {
+  background-color: white;
+  color: teal;
+  box-shadow: 0 0 0 1px teal;
+}
+  /* Don't change padding on hover to prevent shifting */
+  .login2-btn:hover {
+    background-color: white;
+    color: teal;
+    box-shadow: 0 0 0 1px teal;
+    /* Don't change padding on hover to prevent shifting */
+  }
+  
+  .login2-btn {
+    background-color: teal;
+    color: white;
+    padding: 10px 24px; /* Maintain consistent padding */
+    font-size: 1rem; /* Large text size */
+    font-weight: 700; /* Bold text */
+    border-radius: 30px; /* Rounded corners */
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    box-sizing: border-box; /* Ensure padding is included in total width/height */
+  }
+
+
+  .edit_user_btn {
+    background-color: teal;
+    color: white;
+    padding: 0.5rem 0.75rem  ;/* Maintain consistent padding */
+    /* Maintain consistent padding */
+    font-size: 0.875rem; /* Large text size */
+    font-weight: 550; /* Bold text */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    /* box-sizing: border-box; Ensure padding is included in total width/height */
+  }
+  
+  .edit_user_btn:hover {
+    background-color: white;
+    color: teal;
+    box-shadow: 0 0 0 1px teal;
+  }
+
+button{
+  padding-block: 0;
+}
+
+  .hero-btn {
+    background-color: teal;
+    color: white;
+    padding: 10px 24px; /* Adjust padding to make the button larger */
+    font-size: 1rem; /* Large text size */
+    font-weight: 700; /* Bold text */
+    border: none; /* Remove the border */
+    border-radius: 30px; /* Rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+  
+  }
+  
+  .hero-btn:hover {
+    background-color: white;
+    color: teal;
+  }
+  /* Mission Section */
+  .mission {
+    padding: 60px 20px;
+    background-color: #f8f9fa;
+    color: #333;
+  }
+  
+  .mission h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+  
+  .mission p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+  }
+  
+  /* Impact Section */
+  .impact {
+    padding: 60px 20px;
+    background-color: #ffffff;
+    color: #333;
+  }
+  
+  .impact .row {
+    margin-top: 30px;
+  }
+  
+  .impact .col-md-4 {
+    margin-bottom: 30px;
+  }
+  
+  .impact h3 {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  
+  .impact p {
+    font-size: 1.1rem;
+    font-weight: 300;
+  }
+  
+  /* Volunteer Section */
+  #volunteer {
+    padding: 60px 20px;
+    background-color: #e9ecef;
+    color: #333;
+  }
+  
+  #volunteer h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+  
+  #volunteer p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+  }
+
+  .navbar{
+    padding: 10px;
+    ;
+  }
+  
+  .navbar-brand{
+    font-weight: 300;
+    font-size: 16pt
+    
+  }
+  
+  /* Navbar styles */
+  header {
+    position: sticky; /* Keeps it fixed at the top */
+    top: 0; /* Aligns it to the very top */
+    width: 100%; /* Ensures it spans the entire width */
+    z-index: 1000; /* Keeps it above all other elements */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a slight shadow for separation */
+  }
+
+
+
+header li{
+  font-size: 15pt;
+}  
+
+.display-4{
+  font-weight: bolder;
+  letter-spacing: 5px;
+  font-size: 48pt;
+}
+
+.lead{
+  font-family: 'Adobe Garamond Pro', cursive, serif;
+  opacity: 80%; 
+}
+.social-media {
+  background-color: teal; /* Circle background color */
+  color: white;
+  width: 40px; /* Circle size */
+  height: 40px; /* Circle size */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%; /* Makes the background circular */
+  transition: background-color 0.3s ease;
+  margin-left: 10px;
+}
+
+.social-media i{
+  font-size: 18px;
+}
+.social-media:hover {
+  background-color: white; /* Background color on hover */
+  color: teal; /* Icon color on hover */
+  border: 1px solid teal; /* Border on hover */
+}
+
+.social-gap{
+  display: flex;
+  gap: 2px;
+}
+  /* Footer */
+  .footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 30px 10px;
+    position: relative;
+    bottom: 0;
+    margin-top: auto;
+    
+  }
+  
+  .footer p {
+    font-size: 1rem;
+    margin: 10px 0;
+  }
+  
+  .footer a {
+    color: white;
+    margin: 0 10px;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .footer a:hover {
+    color: #007bff;
+  }
+  
+  .footer .social-icons {
+    margin-top: 10px;
+  }
+  
+  .footer .social-icons a {
+    margin: 0 15px;
+    font-size: 1.5rem;
+    color: white;
+    transition: color 0.3s ease;
+  }
+  
+  .footer .social-icons a:hover {
+    color: #007bff;
+  }
+
+  .footeruser{
+    height: 100vh;
+    z-index: -1;
+  }
+
+  .status-pending {
+    color: grey;
+}
+
+.status-declined {
+    color: red;
+}
+
+.status-approved {
+    color: green;
+}
+
+.status-completed {
+    color: black;
+}
+  .height{
+    position: static; 
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .table {
+    border: 1px solid teal;
+    width: 80%;
+    /* border-collapse: separate; Ensures the border-radius works */
+    border-spacing: .5px; /* Removes spacing between cells */
+    border-radius: 10px; /* Rounds the table corners */
+    /* overflow: hidden; */
+    box-shadow: 0 0 8px rgba(0, 128, 128, 0.402); ;
+  }
+
+  .table th{
+    color: white;
+    text-shadow: 0px 0px 3px teal;
+    background-color: teal;
+    border: 1px solid teal;
+    text-align: center; /* Centers text horizontally */
+    vertical-align: baseline; /* Centers text vertically */
+    font-family: Arial, Helvetica, sans-serif; /* Matches the font-family */
+  }
+  .table td{
+    border: 1px solid teal ;
+  }
+
+  .button-table{
+    width: 60px;
+    height: 30px;
+    background-color: teal;
+    color: white;
+    border-radius: 20px;
+    border: none;
+    font-size: 10pt;
+  }
+  .button-table:hover{
+    background-color: white;
+    color: teal;
+    box-shadow: 0 0 0 1px teal;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .table_user {
+    border: 1px solid teal;
+    width: 80%;
+    /* border-collapse: separate; Ensures the border-radius works */
+    border-spacing: .5px; /* Removes spacing between cells */
+    border-radius: 10px; /* Rounds the table corners */
+    /* overflow: hidden; */
+    box-shadow: 0 0 8px rgba(0, 128, 128, 0.402); ;
+  }
+
+  .table_user th{
+    color: white;
+    text-shadow: 0px 0px 3px teal;
+    background-color: teal;
+    border: 1px solid teal;
+    text-align: center; /* Centers text horizontally */
+    vertical-align: baseline; /* Centers text vertically */
+    font-family: Arial, Helvetica, sans-serif; /* Matches the font-family */
+  }
+  .table_user td{
+    border: 1px solid teal ;
+  }
+
+  .volunteer-info{
+    letter-spacing: 3px;
+    font-size: 25pt;
+    text-transform: uppercase;
+    font-weight: bold;
+
+  }
+
+
+  /* General Form Styles */
+.volunteer-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+.form-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.radio-group {
+  display: flex;
+  gap: 15px;
+}
+
+.radio-group label {
+  font-weight: normal;
+  color: #333;
+}
+
+
+
+
+.form-button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  color: #fff;
+  background-color: teal;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form-button:hover {
+  background-color: white;
+  color: teal;
+  box-shadow: 0 0 1px teal;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Page Title */
+.page-title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+.form-select {
+  width: 100%; /* Ensures the dropdown matches the width of the container */
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.form-select {
+  max-height: 150px; /* Limit the height of the dropdown */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.form-group1 {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20px;
+  margin: left 20px; 
+  margin: right 20px; 
+}
+.form-group{
+  margin-bottom: 20px;
+}
+
+.form-label {
+  font-weight: bold;
+  color: #333;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-input, .form-select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+  box-sizing: border-box;
+}
+
+
+.form-input:focus, .form-select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+.user{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+}
+
+.container10 {
+  display: flex;
+  gap: 40em;
+}
+
+.search-form {
+  flex: 1; /* Allows search form to take up available space */
+}
+
+.add-form {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.search-form-left {
+  display: flex;
+  align-items: center;
+}
+
+.search-form-left input {
+  margin-right: 10px; /* Adds space between the input and button */
+}
+@media screen and (max-width: 768px) {
+  .volunteer-form {
+    padding: 15px;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  .form-label {
+    font-size: 1em;
+  }
+
+  .form-input, .form-select {
+    font-size: 0.9em;
+  }
+
+  .form-button {
+    font-size: 1em;
+  }
+}
+
+
+.reset_button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+
+}
+.table-mobile{
+  display: none;
+}
+
+.user-mobile{
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .table {
+    display: none;
+    
+    
+  }
+  .container10 {
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+    gap: 50px;
+  }
+  /* .height{
+    position: static; 
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+  } */
+
+  .login1-btn {
+    background-color: teal;
+    color: white;
+    padding: 10px 24px;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 30px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+.round_input{
+  border-radius: 10px;
+}
+.volunteer-info b {
+  flex: display;
+  justify-content: center;
+  letter-spacing: 0px;
+  font-size: 15pt;
+  text-transform: uppercase;
+}
+.spacing{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.table-mobile{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 70px;
+  border-radius: 10px;
+}
+.center_mobile_data{
+display: flex;
+flex-direction: column;
+justify-content: center;
+border: 1px solid teal ;
+padding: 20px;
+margin-bottom: 20px;
+border-radius: 10px;
+}
+.form-group1 {
+  display: flex
+;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 0px;
+}
+.user{
+  display: none;
+}
+.user-mobile{
+  display: block;
+}
+}
+.desktop-user-management {
+  display: block;
+}
+
+.mobile-user-management {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .desktop-user-management {
+    display: none; /* Hide desktop table */
+  }
+  .mobile-user-management {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;/* Show mobile table */
+  }
+  .responsive-mobile-table {
+    text-align: center;
+    /* width: 10em; */
+    border-collapse: collapse;
+    border: 1px solid teal;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    padding: 40px;
+  }
+  .responsive-mobile-table tr {
+    padding: 5px;
+    display: block; /* Stack rows */
+
+  }
+  .responsive-mobile-table td {
+    display: block; /* Stack cells in each row */
+    padding: 5px;
+  }
+  
+  .action-button {
+    display: inline-block;
+    margin: 5px 0;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .action-button:hover {
+    background-color: #0056b3;
+  }
+  .users-mobile{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 10px;
+  }
+}
